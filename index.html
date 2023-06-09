@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag-Drop</title>
+    <title>Drag & Drop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="main">
-        <h3 class="heading">Drag & Drop </h3>
+        <h1>Drag & Drop</h1>
 
         <div class="container">
-            <div class="container-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="container-1">
                 <div class="item" draggable="true" ondragstart="drag(event)">Item 1</div>
                 <div class="item" draggable="true" ondragstart="drag(event)">Item 2</div>
                 <div class="item" draggable="true" ondragstart="drag(event)">Item 3</div>
+                <div class="item" draggable="true" ondragstart="drag(event)">Item 4</div>
+                <div class="item" draggable="true" ondragstart="drag(event)">Item 5</div>
+                <div class="item" draggable="true" ondragstart="drag(event)">Item 6</div>
             </div>
-            <div class="container-2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="container-2" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <div class="drop-message" id="dropMessage">Drop here</div>
+            </div>
         </div>
+        <div class="success-message" id="successMessage">Items dropped successfully!</div>
         <button onclick="reset()">Reset</button>
     </div>
+
+    <script src="index.js"></script>
+
 </body>
 
 </html>
