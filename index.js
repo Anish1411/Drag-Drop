@@ -6,12 +6,14 @@ function allowDrop(event) {
     event.preventDefault();
 }
 
+// Drag function
 function drag(event) {
     var draggedItem = event.target;
     draggedItems.push(draggedItem.innerHTML);
     draggedItem.classList.add("dragging");
 }
 
+//Drop function
 function drop(event) {
     event.preventDefault();
     var droppedItems = draggedItems;
@@ -41,6 +43,7 @@ function drop(event) {
     `;
 }
 
+//Reset function
 function reset() {
     var container1 = document.querySelector(".container-1");
     var container2 = document.querySelector(".container-2");
@@ -60,6 +63,7 @@ function reset() {
     draggedItems = [];
 }
 
+//function to display Success message
 function displaySuccessMessage() {
     successMessage.style.display = "block";
     setTimeout(function () {
